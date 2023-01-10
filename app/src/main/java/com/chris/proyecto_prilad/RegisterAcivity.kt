@@ -42,13 +42,13 @@ class RegisterAcivity : AppCompatActivity() {
 
 
 
-        //Botones
-        //val btn2: Button = findViewById(R.id.registroTerminadoBtn)
-       // btn2.setOnClickListener {
-          //  val intent: Intent = Intent(this, Pantalla_2::class.java)
-          //  startActivity(intent)
+       // Botones
+        val btn2: Button = findViewById(R.id.iniciarSesionBtn2)
+        btn2.setOnClickListener {
+           val intent: Intent = Intent(this, Pantalla_2::class.java)
+            startActivity(intent)
 
-        //}
+        }
     }
 
     private fun crearCuenta(email: String, password: String){

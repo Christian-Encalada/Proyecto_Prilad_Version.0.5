@@ -4,7 +4,8 @@
 
     <string name="btn_iniciar_sesion">Iniciar Sesion</string>
     <string name="btn_registrarse">Registrarse</string>
-    <string name="btn_registo">Terminar Registro</string>
+    <string name="btn_registo">Confirmar Registro</string>
     <string name="btn">Empezar</string>
+    <string name="btnVolver">Fin</string>
 
 </resources>

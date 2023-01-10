@@ -19,24 +19,21 @@ class Pantalla_2 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_pantalla2)
-
         val btnsesion : Button = findViewById(R.id.iniciarSesionBtn)
         val txtemail : TextView = findViewById(R.id.edtCorreo)
         val txtpass : TextView = findViewById(R.id.edtContrasena)
         //botones de pantallas
 
-        val btn: Button = findViewById(R.id.iniciarSesionBtn)
-        btn.setOnClickListener {
-            val intent: Intent = Intent(this, CalendarioMain::class.java)
-            startActivity(intent)
 
 
-        }
         val btn2: Button = findViewById(R.id.registroBtn)
         btn2.setOnClickListener {
             val intent: Intent = Intent(this, RegisterAcivity::class.java)
             startActivity(intent)
+
+
         }
+
 
 
         //iniciar sesion
@@ -44,6 +41,15 @@ class Pantalla_2 : AppCompatActivity() {
         btnsesion.setOnClickListener()
         {
             singIn(txtemail.text.toString(), txtpass.text.toString())
+            val btn: Button = findViewById(R.id.iniciarSesionBtn)
+            btn.setOnClickListener {
+                if (txtemail.text.isEmpty() || txtpass.text.isEmpty()) {
+                    Toast.makeText(baseContext, "Por favor proporciona un correo electrónico y una contraseña.", Toast.LENGTH_SHORT).show()
+                }
+                singIn(txtemail.text.toString(), txtpass.text.toString())
+                val intent: Intent = Intent(this, CalendarioMain::class.java)
+                startActivity(intent)
+            }
         }
 
 
